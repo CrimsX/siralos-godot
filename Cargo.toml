@@ -9,6 +9,7 @@ description = "Godot domain — standalone Plugin crate behind siralos:domain-ab
 [dependencies]
 siralos-core = { path = "../siralos/crates/siralos-core", version = "0.0.0" }
 serde_json = "1"
+dirs = "6"
 
 [lints.rust]
 unsafe_code = "forbid"

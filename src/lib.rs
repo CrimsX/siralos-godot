@@ -9,6 +9,10 @@
 
 #![forbid(unsafe_code)]
 
+pub mod adapters;
+pub mod config;
 pub mod godot;
+pub mod paths;
+pub mod workspace;
 
 pub use godot::*;
