@@ -129,10 +129,11 @@ mod tests {
                 property: "text".to_owned(),
                 value: GodotVariantValue::String("Play".to_owned()),
             }],
-            preview: crate::adapters::godot::scene_mutation::GodotMutationPreview {
-                structural_summary: "set Root/Button.text".to_owned(),
-                diff: "--- a\n+++ b\n".to_owned(),
-            },
+            preview:
+                crate::adapters::godot::scene_mutation::GodotMutationPreview {
+                    structural_summary: "set Root/Button.text".to_owned(),
+                    diff: "--- a\n+++ b\n".to_owned(),
+                },
             serialized_after: "[gd_scene]\n".to_owned(),
             added_lines: 1,
             removed_lines: 1,

@@ -13,12 +13,12 @@
 //! A script parse failure is a VALID diagnostic result; exit-status
 //! semantics live in the service, not here.
 
-use siralos_core::language::{
-    sanitize_control_characters, truncate_utf8_bytes,
-};
 use crate::godot::{
     GODOT_LIMITS, GdScriptDiagnosticSource, GdScriptSeverity,
     GodotGdScriptDiagnostic,
+};
+use siralos_core::language::{
+    sanitize_control_characters, truncate_utf8_bytes,
 };
 
 /// Input console output of one check-only run.

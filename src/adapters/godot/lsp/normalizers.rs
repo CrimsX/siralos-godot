@@ -12,6 +12,11 @@
 
 use serde_json::Value;
 
+use crate::godot::{
+    GODOT_LIMITS, GdScriptCompletionItem, GdScriptCompletionResult,
+    GdScriptDefinitionLocation, GdScriptHoverResult, GdScriptHoverSection,
+    GdScriptSeverity, GdScriptSourceRange, GodotGdScriptDiagnostic,
+};
 use siralos_core::language::position::{RawPosition, RawRange};
 use siralos_core::language::truncate_utf8_bytes;
 use siralos_core::language::{
@@ -19,11 +24,6 @@ use siralos_core::language::{
     RawDefinitionEntry, RawDiagnostic, RawDiagnosticCode,
     normalize_definition_locations, normalize_diagnostic_payload,
     sanitize_control_characters, to_one_based_range,
-};
-use crate::godot::{
-    GODOT_LIMITS, GdScriptCompletionItem, GdScriptCompletionResult,
-    GdScriptDefinitionLocation, GdScriptHoverResult, GdScriptHoverSection,
-    GdScriptSeverity, GdScriptSourceRange, GodotGdScriptDiagnostic,
 };
 
 use super::file_uri::mirror_uri_to_workspace_relative;
@@ -485,8 +485,8 @@ mod tests {
         LspNormalizationContext, normalize_completion, normalize_definition,
         normalize_hover, normalize_publish_diagnostics,
     };
-    use serde_json::json;
     use crate::godot::GdScriptSeverity;
+    use serde_json::json;
 
     const MIRROR: &str = if cfg!(windows) { "C:\\mirror" } else { "/mirror" };
 

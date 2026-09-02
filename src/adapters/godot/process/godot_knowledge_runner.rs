@@ -9,10 +9,8 @@
 //! outcome and nothing is created or deleted. An ordinary
 //! `--dump-extension-api` result is never substituted.
 
+use crate::godot::{GodotEdition, GodotEngineProfile, GodotInstallation};
 use siralos_core::identity::sha256_hex;
-use crate::godot::{
-    GodotEdition, GodotEngineProfile, GodotInstallation,
-};
 
 /// Fixed Siralos-owned API documentation generation invocation.
 pub const GODOT_KNOWLEDGE_BASE_ARGUMENTS: [&str; 1] =

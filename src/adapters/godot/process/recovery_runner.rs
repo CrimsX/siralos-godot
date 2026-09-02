@@ -14,10 +14,10 @@
 //! `--path` is reported unsupported and no weaker mode is ever
 //! substituted.
 
-use siralos_core::identity::sha256_hex;
 use crate::godot::{
     GODOT_LIMITS, GodotEdition, GodotEngineProfile, GodotInstallation,
 };
+use siralos_core::identity::sha256_hex;
 
 /// Fixed Siralos-owned recovery-mode editor invocation tuple.
 pub const GODOT_RECOVERY_BASE_ARGUMENTS: [&str; 3] =

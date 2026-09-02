@@ -17,7 +17,6 @@ use crate::godot::{
     GodotSelectionPreference, SafeDiagnostic, rank_godot_candidates,
 };
 
-use crate::config::UserGodotConfig;
 use crate::adapters::godot::discovery::executable_validation::{
     ValidateExecutableOptions, validate_executable,
 };
@@ -26,6 +25,7 @@ use crate::adapters::godot::discovery::path_discovery::{
     invalid_installation,
 };
 use crate::adapters::godot::process::probe_runner::GODOT_PROBING_UNAVAILABLE_MESSAGE;
+use crate::config::UserGodotConfig;
 use crate::godot::{
     GodotInstallationSource as Source, InstallEditionHint as Hint,
 };
@@ -577,10 +577,10 @@ mod tests {
         GodotOverrideSource, GodotProfilerInputs, GodotSelectionPreference,
         deduplicate_candidates, discover,
     };
+    use crate::adapters::godot::process::probe_runner::GODOT_PROBING_UNAVAILABLE_MESSAGE;
     use crate::config::{
         UserGodotConfig, UserGodotEditionHint, UserGodotInstallationConfig,
     };
-    use crate::adapters::godot::process::probe_runner::GODOT_PROBING_UNAVAILABLE_MESSAGE;
     use crate::godot::GodotInstallation;
     use std::fs;
     use std::path::{Path, PathBuf};

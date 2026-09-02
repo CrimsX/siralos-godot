@@ -15,9 +15,7 @@
 //! `--check-only`, the check refuses as unsupported and the script is
 //! never run normally.
 
-use crate::godot::{
-    GodotEdition, GodotEngineProfile, GodotInstallation,
-};
+use crate::godot::{GodotEdition, GodotEngineProfile, GodotInstallation};
 
 /// Marker for the disposable mirror project path (never a real path).
 pub const GODOT_CHECK_ONLY_MIRROR_PATH_MARKER: &str = "<disposable-mirror>";

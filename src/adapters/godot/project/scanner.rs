@@ -8,9 +8,7 @@ use crate::godot::diagnostics::{DiagnosticSeverity, SafeDiagnostic};
 use crate::godot::scene::{
     GodotVariantValue, is_balanced_text, parse_godot_variant,
 };
-use crate::godot::{
-    GODOT_LIMITS, GodotAutoloadSummary, GodotInputAction,
-};
+use crate::godot::{GODOT_LIMITS, GodotAutoloadSummary, GodotInputAction};
 
 const MAX_SECTIONS: usize = 128;
 const MAX_PROPERTIES_PER_SECTION: usize = 4096;

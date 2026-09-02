@@ -6,8 +6,8 @@
 
 use std::path::{Path, PathBuf};
 
-use siralos_core::identity::sha256_hex;
 use crate::godot::GODOT_LIMITS;
+use siralos_core::identity::sha256_hex;
 
 use crate::workspace::fs::{BoundedFileRead, read_complete_file_bounded};
 use crate::workspace::resolve::resolve_workspace_path;

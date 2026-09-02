@@ -13,10 +13,8 @@
 //! only references the disposable mirror, and that scene, script, import,
 //! DAP/debug-server, export, and quit options never appear.
 
+use crate::godot::{GodotEdition, GodotEngineProfile, GodotInstallation};
 use siralos_core::identity::sha256_hex;
-use crate::godot::{
-    GodotEdition, GodotEngineProfile, GodotInstallation,
-};
 
 /// Marker for the disposable mirror project path (never a real path).
 pub const GODOT_LSP_MIRROR_PATH_MARKER: &str = "<disposable-mirror>";

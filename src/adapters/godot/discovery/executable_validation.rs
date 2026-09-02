@@ -6,8 +6,8 @@ use std::io::Read as _;
 use std::path::{Path, PathBuf};
 use std::time::UNIX_EPOCH;
 
-use siralos_core::identity::Sha256;
 use crate::godot::limits::GODOT_LIMITS;
+use siralos_core::identity::Sha256;
 
 use super::macos_bundle::enclosing_app_bundle;
 

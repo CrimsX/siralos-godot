@@ -9,13 +9,13 @@
 
 use std::collections::HashSet;
 
-use siralos_core::language::truncate_utf8_bytes;
 use crate::godot::{
     GODOT_LIMITS, GodotApiIndex, GodotApiLookupResult, GodotApiParameter,
     GodotApiSearchKind, GodotApiSearchOutcome, GodotApiSearchRank,
     GodotApiSearchResult, GodotApiSymbol, GodotApiSymbolDetails,
     GodotApiSymbolKind, GodotApiType, godot_symbol_id,
 };
+use siralos_core::language::truncate_utf8_bytes;
 
 use super::api_dump::{
     GodotApiDumpClass, GodotApiDumpDocument, GodotApiDumpEnumValue,
